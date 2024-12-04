@@ -1,0 +1,43 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background-color: #f0f0f0;
+}
+
+.hidden {
+  display: none;
+}
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+  gap: 2px;
+  max-width: 600px;
+  margin: 20px auto;
+  aspect-ratio: 10 / 6;
+}
+
+.square {
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.square.start {
+  background-color: #8fbc8f;
+}
+
+.square.finish {
+  background-color: #ffd700;
+}
+
+.game-piece {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  position: absolute;
+}

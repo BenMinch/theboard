@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Game Board</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Team Setup -->
+  <div id="team-setup" class="hidden">
+    <h2>Team Setup</h2>
+    <label for="num-teams">Number of Teams:</label>
+    <select id="num-teams">
+      <option value="2">2 Teams</option>
+      <option value="3">3 Teams</option>
+    </select>
+    <div id="team-names">
+      <div>
+        <input type="text" placeholder="Team 1 Name" id="team1-name">
+        <input type="color" value="#ff0000" id="team1-color">
+      </div>
+      <div>
+        <input type="text" placeholder="Team 2 Name" id="team2-name">
+        <input type="color" value="#0000ff" id="team2-color">
+      </div>
+      <div class="hidden" id="team3-container">
+        <input type="text" placeholder="Team 3 Name" id="team3-name">
+        <input type="color" value="#00ff00" id="team3-color">
+      </div>
+    </div>
+    <button id="start-game">Start Game</button>
+  </div>
+
+  <!-- Game Board -->
+  <div id="game-board" class="hidden">
+    <h2>Game Board</h2>
+    <div id="board" class="board"></div>
+    <div id="controls">
+      <p id="current-turn">Turn: Team 1</p>
+      <button id="roll-dice">Roll Dice</button>
+      <p id="dice-result">Dice: 0</p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
